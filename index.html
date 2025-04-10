@@ -5,50 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Academic Website</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <!-- Your name in Persian/Arabic script could go here -->
-            <h1>آریا رستگار </h1>
+            <a href="index.html" class="name-logo">Your Name</a>
         </div>
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="publications.html">Publications</a></li>
                 <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="profile">
+        <section class="hero">
             <div class="profile-image">
                 <img src="images/your-photo.jpg" alt="Your Name">
             </div>
-            <div class="profile-text">
-                <p>My academic journey began with... [your bio text here]</p>
-                <!-- Add more paragraphs as needed -->
+            <div class="profile-info">
+                <h1>Your Name</h1>
+                <p class="title">PhD in [Your Field] | [Your Current Position]</p>
+                <p>I am a researcher at <a href="#">University Name</a> focusing on [your research areas].</p>
+                <div class="social-links">
+                    <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/yourusername" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/yourusername" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
         </section>
 
-        <aside class="contact-info">
-            <h3>Contact:</h3>
-            <p>Your Name</p>
-            <p>Department of [Your Department]</p>
-            <p>University of [Your University]</p>
-            <p>Building X, Room XXX</p>
-            <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
-            <!-- Add more contact details -->
-        </aside>
+        <section class="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>My academic journey began with [your background]. I focus on [your research interests] with a particular emphasis on [specific area].</p>
+                
+                <p>Currently, I am working on [current project or research], which aims to [brief description of goals]. My work has been published in journals such as [journal names] and presented at conferences including [conference names].</p>
+                
+                <p>Beyond research, I am involved in [teaching/outreach/other professional activities].</p>
+            </div>
+        </section>
+
+        <section class="featured-research">
+            <h2>Featured Research</h2>
+            <div class="research-items">
+                <div class="research-item">
+                    <h3>Research Project 1</h3>
+                    <p>Brief description of your first featured research project and its significance.</p>
+                    <a href="research.html#project1" class="read-more">Read more</a>
+                </div>
+                <div class="research-item">
+                    <h3>Research Project 2</h3>
+                    <p>Brief description of your second featured research project and its significance.</p>
+                    <a href="research.html#project2" class="read-more">Read more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-publications">
+            <h2>Recent Publications</h2>
+            <ul class="publication-list">
+                <li>
+                    <span class="pub-year">2023</span>
+                    <span class="pub-authors">Your Name, Co-author A., Co-author B.</span>
+                    <span class="pub-title">"Title of your most recent publication"</span>
+                    <span class="pub-journal">Journal Name</span>
+                    <a href="#" class="pub-link">View paper</a>
+                </li>
+                <li>
+                    <span class="pub-year">2022</span>
+                    <span class="pub-authors">Your Name, Co-author C.</span>
+                    <span class="pub-title">"Title of another recent publication"</span>
+                    <span class="pub-journal">Conference Proceedings</span>
+                    <a href="#" class="pub-link">View paper</a>
+                </li>
+            </ul>
+            <a href="publications.html" class="all-publications">See all publications</a>
+        </section>
     </main>
 
     <footer>
-        <div class="social-links">
-            <a href="mailto:your.email@example.com"><img src="images/email-icon.svg" alt="Email"></a>
-            <a href="https://linkedin.com/in/yourprofile"><img src="images/linkedin-icon.svg" alt="LinkedIn"></a>
-            <!-- Add more social media links -->
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contact</h3>
+                <p>Your Name</p>
+                <p>Department of [Your Department]</p>
+                <p>University of [Your University]</p>
+                <p>Building X, Room XXX</p>
+                <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
