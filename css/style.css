@@ -1,3 +1,22 @@
+/* Import Vazir Font */
+@font-face {
+    font-family: 'Vazir';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 :root {
     --dark-bg: #2D2E33;
     --darker-bg: #1E1F23;
@@ -21,6 +40,12 @@ body {
     background-color: var(--darker-bg);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+/* Persian Text Styling */
+.persian-text {
+    font-family: 'Vazir', Tahoma, Arial, sans-serif;
+    direction: rtl;
 }
 
 a {
@@ -48,6 +73,7 @@ header {
     margin: 0;
     font-size: 2.2rem;
     font-weight: normal;
+    font-family: 'Vazir', Tahoma, Arial, sans-serif;
 }
 
 nav ul {
@@ -226,6 +252,176 @@ footer .social-links {
     color: #888;
 }
 
+/* CV Page Specific Styles */
+.cv-page {
+    display: block; /* Override grid layout from main */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cv-download-container {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 30px;
+    background-color: var(--section-bg);
+    border-radius: 5px;
+}
+
+.cv-download-container h1 {
+    margin-bottom: 15px;
+}
+
+.cv-download-btn, .cv-print-btn {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 12px 25px;
+    background-color: var(--accent-color);
+    color: var(--darker-bg);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cv-download-btn:hover, .cv-print-btn:hover {
+    background-color: var(--link-hover);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.cv-content {
+    background-color: var(--section-bg);
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.cv-item {
+    margin-bottom: 25px;
+}
+
+.cv-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.cv-item-degree, .cv-item-position {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.cv-item-date {
+    color: var(--accent-color);
+}
+
+.cv-item-institution {
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.cv-item-details {
+    margin-top: 8px;
+}
+
+.cv-publication-list {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.cv-publication-list li {
+    margin-bottom: 10px;
+}
+
+/* Publications Page Specific Styles */
+.publications-page {
+    display: block; /* Override grid layout from main */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.publications-page h1 {
+    margin-bottom: 30px;
+}
+
+.pub-section {
+    margin-bottom: 40px;
+}
+
+.pub-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.pub-item {
+    display: flex;
+    background-color: var(--section-bg);
+    padding: 20px;
+    border-radius: 5px;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.pub-item:hover {
+    transform: translateY(-3px);
+}
+
+.pub-year {
+    min-width: 60px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.pub-details {
+    flex: 1;
+}
+
+.pub-title {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.pub-authors {
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.pub-venue {
+    margin-bottom: 15px;
+}
+
+.pub-links {
+    display: flex;
+    gap: 15px;
+}
+
+.pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9rem;
+}
+
 /* Print Styles for CV */
 @media print {
     body {
@@ -233,7 +429,7 @@ footer .social-links {
         color: black;
     }
     
-    header, footer, .social-links {
+    header, footer, .social-links, .cv-download-container {
         display: none;
     }
     
@@ -290,5 +486,13 @@ footer .social-links {
     
     .social-links {
         justify-content: center;
+    }
+    
+    .pub-item {
+        flex-direction: column;
+    }
+    
+    .pub-year {
+        text-align: left;
     }
 }
