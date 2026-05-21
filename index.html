@@ -2,73 +2,174 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Aria Rastegar | Academic Portfolio</title>
+    
+    <!-- Google Fonts for Barks Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        body { font-family: system-ui, sans-serif; line-height: 1.6; max-width: 850px; margin: 0 auto; padding: 2rem; color: #333; }
-        h1 { color: #2c3e50; margin-bottom: 0.2rem; }
-        h2 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; color: #2c3e50; margin-top: 2.5rem; }
-        .subtitle { color: #666; font-size: 1.2rem; margin-top: 0; }
-        .contact-info { margin-bottom: 2rem; font-size: 0.95rem; }
-        .publication { margin-bottom: 1rem; }
-        .skill-category { margin-bottom: 0.5rem; }
+        /* Barks Theme Colors & Variables */
+        :root {
+            --bg-color: #fcfbf9;
+            --text-color: #333333;
+            --link-color: #60c17d;
+            --heading-font: 'Bree Serif', serif;
+            --body-font: 'Source Sans Pro', sans-serif;
+        }
+
+        body {
+            font-family: var(--body-font);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--heading-font);
+            font-weight: normal;
+            color: var(--text-color);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 0.5rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header & Contact Styling */
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #666;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+        }
+
+        .social-links a:hover {
+            color: var(--link-color);
+        }
+
+        /* Lists & Items Styling */
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        .publication {
+            margin-bottom: 1.2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--link-color);
+        }
+
+        .skill-category {
+            margin-bottom: 0.8rem;
+        }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Dr. Aria Rastegar</h1>
-        <p class="subtitle">Researcher in Linguistics</p>
-        <p class="contact-info">📍 Nuremberg, Germany | ✉️ aria.rastegar@fau.de | <a href="https://linkedin.com/in/ariarastegar">LinkedIn</a></p>
+        <p class="subtitle">Researcher in Linguistics based in Nuremberg, Germany</p>
+        
+        <div class="social-links">
+            <a href="mailto:aria.rastegar@fau.de" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/ariarastegar" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I investigate how language is understood[cite: 4]. Do we process language word-by-word, or do we draw on larger prefabricated chunks and constructions[cite: 4]? How do compositional and non-compositional processes interact as we comprehend language[cite: 5]? What role do meaning, function, and pragmatic context play in this process[cite: 6]? To answer questions like these, I use experimental methods, computational approaches, and statistical analysis[cite: 7].</p>
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>I investigate how language is understood. Do we process language word-by-word, or do we draw on larger prefabricated chunks and constructions? How do compositional and non-compositional processes interact as we comprehend language? What role do meaning, function, and pragmatic context play in this process? To answer questions like these, I use experimental methods, computational approaches, and statistical analysis.</p>
+            
+            <p>My PhD work focuses on cross-linguistic comprehension of idiomatic constructions in L1 and L2 speakers of Persian, German, and English. I believe this cross-linguistic approach can address many other fundamental questions in language understanding.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD in Linguistics</strong> (magna cum laude) <br> <em>Friedrich-Alexander University, Erlangen, Germany</em></li>
+                <li><strong>Master of Arts in Language Sciences</strong> <br> <em>Ca' Foscari University, Venice, Italy</em></li>
+                <li><strong>Bachelor of Arts in English Language Translation</strong> <br> <em>Imam Reza International University, Mashhad, Iran</em></li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Recent Publications</h2>
+            <div class="publication">
+                <strong>Cui, C., & Rastegar, A.</strong> (accepted). The Mandeville-Author's sense of space: A digital-ecological reading of Mandeville's Travels. <em>Digital Scholarship in the Humanities</em>.
+            </div>
+            <div class="publication">
+                <strong>Rastegar, A.</strong> (2025). Implications of cross-linguistic correspondence for teaching idioms. <em>Pedagogical Linguistics</em>.
+            </div>
+            <div class="publication">
+                <strong>Rastegar, A., & Ramezani, P.</strong> (2024). From "It's All Greek to Me" to "Nur Bahnhof verstehen": An investigation of mBERT's cross-linguistic capabilities. <em>Proceedings of the Tenth Italian Conference on Computational Linguistics (CLiC-it 2024)</em>.
+            </div>
+        </section>
         
-        <p>My PhD work focuses on cross-linguistic comprehension of idiomatic constructions in L1 and L2 speakers of Persian, German, and English[cite: 8]. I believe this cross-linguistic approach can address many other fundamental questions in language understanding[cite: 9].</p>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skill-category">
+                <strong>Programming & Typesetting:</strong> R, Python, LaTeX
+            </div>
+            <div class="skill-category">
+                <strong>Statistical Analysis:</strong> Mixed-effects modeling (lme4, glmer), Bayesian analysis (brms), Data visualization (ggplot2, tidyverse)
+            </div>
+            <div class="skill-category">
+                <strong>Experimental Design:</strong> Gorilla Experiment Builder, Qualtrics, Response time measurement
+            </div>
+            <div class="skill-category">
+                <strong>Natural Language Processing:</strong> Transformers, PyTorch, BERT models (mBERT), LLMs, NLTK, SpaCy
+            </div>
+        </section>
+    </main>
 
-        <p style="margin-top: 2rem;">
-            <a href="cv.pdf" target="_blank" style="background-color: #2c3e50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-                📄 View Full CV
-            </a>
-        </p>
-    </section>
-
-    <section>
-        <h2>Education</h2>
-        <ul>
-            <li><strong>PhD in Linguistics</strong> (magna cum laude) — Friedrich-Alexander University, Erlangen, Germany </li>
-            <li><strong>Master of Arts in Language Sciences</strong> — Ca' Foscari University, Venice, Italy </li>
-            <li><strong>Bachelor of Arts in English Language Translation</strong> — Imam Reza International University, Mashhad, Iran </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Recent Publications</h2>
-        <div class="publication">
-            <strong>Cui, C., & Rastegar, A.</strong> (accepted). The Mandeville-Author's sense of space: A digital-ecological reading of Mandeville's Travels[cite: 14]. <em>Digital Scholarship in the Humanities</em>[cite: 15].
-        </div>
-        <div class="publication">
-            <strong>Rastegar, A.</strong> (2025). Implications of cross-linguistic correspondence for teaching idioms[cite: 16]. <em>Pedagogical Linguistics</em>[cite: 16].
-        </div>
-        <div class="publication">
-            <strong>Rastegar, A., & Ramezani, P.</strong> (2024). From "It's All Greek to Me" to "Nur Bahnhof verstehen": An investigation of mBERT's cross-linguistic capabilities[cite: 18]. <em>Proceedings of the Tenth Italian Conference on Computational Linguistics (CLiC-it 2024)</em>[cite: 19].
-        </div>
-    </section>
-    
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skill-category">
-            <strong>Programming & Typesetting:</strong> R, Python, LaTeX [cite: 52]
-        </div>
-        <div class="skill-category">
-            <strong>Statistical Analysis:</strong> Mixed-effects modeling (lme4, glmer), Bayesian analysis (brms), Data visualization (ggplot2, tidyverse) [cite: 53]
-        </div>
-        <div class="skill-category">
-            <strong>Experimental Design:</strong> Gorilla Experiment Builder, Qualtrics, Response time measurement [cite: 53]
-        </div>
-        <div class="skill-category">
-            <strong>Natural Language Processing:</strong> Transformers, PyTorch, BERT models (mBERT), LLMs, NLTK, SpaCy [cite: 53]
-        </div>
-    </section>
 </body>
 </html>
